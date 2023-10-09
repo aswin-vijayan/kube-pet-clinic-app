@@ -44,7 +44,7 @@ pipeline {
             steps {
                 script {
                     nexusUpload(
-                        "repository/maven-releases/jarfile/pet-clinic/1.0.${BUILD_NUMBER}",
+                        "repository/maven-releases/org/pet-clinic/1.0.${BUILD_NUMBER}",
                         "NEXUS_CRED",
                         "pet-clinic-1.0.${BUILD_NUMBER}.jar")
                     }
