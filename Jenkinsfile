@@ -9,17 +9,6 @@ pipeline {
     }
 
     stages {
-        stage('Git Checkout') {
-            steps {
-                script {
-                    def config = [
-                        gitUrl: "https://github.com/spring-projects/spring-petclinic.git",
-                        branch: "main",
-                    ]
-                    gitCheckout.call(config)
-                }
-            }
-        }
         stage('Build') {
             steps {
                 script {
