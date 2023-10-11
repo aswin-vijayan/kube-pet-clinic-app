@@ -16,6 +16,13 @@ pipeline {
                 }
             }
         }
+        stage('Test') {
+            steps {
+                script {
+                    mvnTest()
+                }
+            }
+        }
         stage('SonarQube Scan') {
             steps {
                 script {
